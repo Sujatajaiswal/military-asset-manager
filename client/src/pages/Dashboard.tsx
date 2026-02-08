@@ -32,7 +32,7 @@ const Dashboard: React.FC = () => {
     const fetchStats = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/dashboard/stats",
+          "https://military-asset-manager-1-5ku6.onrender.com/api/dashboard/stats",
           {
             headers: {
               "x-user-role": "ADMIN", // ✅ REQUIRED for RBAC

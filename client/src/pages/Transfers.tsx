@@ -41,7 +41,7 @@ const Transfers: React.FC = () => {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/assets/transfer",
+        "https://military-asset-manager-1-5ku6.onrender.com/api/assets/transfer",
         transferData,
         {
           headers: {

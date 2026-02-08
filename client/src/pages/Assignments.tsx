@@ -35,12 +35,16 @@ const Assignments: React.FC = () => {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/assets/assign", data, {
-        headers: {
-          "x-user-role": "BASE_COMMANDER", // ✅ REQUIRED for RBAC
-          "x-user-base-id": data.base_id, // ✅ REQUIRED for base restriction
+      await axios.post(
+        "https://military-asset-manager-1-5ku6.onrender.com/api/assets/assign",
+        data,
+        {
+          headers: {
+            "x-user-role": "BASE_COMMANDER", // ✅ REQUIRED for RBAC
+            "x-user-base-id": data.base_id, // ✅ REQUIRED for base restriction
+          },
         },
-      });
+      );
 
       alert(`${data.type} recorded successfully ✅`);
 
